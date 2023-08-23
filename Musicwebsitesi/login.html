@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    
+</head>
+<body>
+    
+    
+    <div class="all">
+        
+        <div class="aniltek"><h1>ANIL TEK MUSİC</h1></div>
+        <img src="logo1.webp" class="logo">
+        <div class="login">
+            <form action="musicweb.html">
+                <h1>LOG İN FORM</h1><br><br>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email"><br><br>
+                <div>Password: <input type="password" value="FakePSW" id="myInput"><br><br>
+                    <input type="checkbox" onclick="myFunction()">Şifreyi Göster
+                    <br><br>
+                    <input type="submit" value="Giriş yap" ıd="submit" ><br><br>
+                    <h2><small>İf you dont an account go and make one!!!</small></h2>
+
+                    
+                    
+                    <script>
+                    function myFunction() {
+                      var x = document.getElementById("myInput");
+                      if (x.type === "password") {
+                        x.type = "text";
+                      } else {
+                        x.type = "password";
+                      }
+                    }
+                    </script></div>
+            </form>
+            
+            <form action="signin.html" class="register">
+                <input type="submit" value="Kayıt Ol" id="reg" >
+            </form>
+        </div>
+        <div class="right-col">
+            <p></p>
+            <img src="pplay.png" id="icon">
+            
+        </div>
+        <audio id="mysong">
+            <source src="sleepwalk.mp3">
+         </audio>
+     <script>
+         var mysong = document.getElementById("mysong");
+         var icon = document.getElementById("icon");
+     
+                 icon.onclick= function(){
+                     if(mysong.paused){
+                        mysong.play();
+                        icon.src ="pause.png";
+                    }else{
+                        mysong.paused();
+                        icon.src = "pplay.png";
+                    }
+     
+             }
+
+             
+     
+     
+     
+     </script>
+     <script src="signin.js"></script>
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <div class="music">
+        <img src="gitar.png" >
+        <img src="plak.png" >
+        <img src="gitar.png" >
+        <img src="plak.png" >
+        <img src="gitar.png" >
+        <img src="plak.png" >
+        <img src="gitar.png" >
+        <img src="plak.png" >
+        <img src="gitar.png" >
+        <img src="plak.png" >
+
+
+
+
+
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+</body>
+</html>

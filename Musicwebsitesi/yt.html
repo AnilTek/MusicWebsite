@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    
+</head>
+<body id="bd">
+    
+    
+    <div class="all">
+        
+        <div class="aniltek"><h1>ANIL TEK MUSİC</h1></div>
+        <img src="logo1.webp" class="logo">
+        <div class="login">
+            <form id="myForm" class="form">
+                <h1>Youtube Stats</h1><br><br>
+                <div>ChannelID <input type="password" value="FakePSW" id="cr7"><br><br>
+                    <input type="checkbox" onclick="myFunction()">Show Channel ID
+                    <br><br>
+                    <input type="submit" onclick="ytstats()" value="Show Stats" id="myInput" ><br><br>
+                    <h2>Subscriber</h2>
+                    <div id="subCount">Subscriber:</div>
+                    <h2>Wiew Count</h2>
+                    <div id="view">View:</div>
+                    <h2>Video Count</h2>
+                    <div id="videoCount">Video Count</div>
+                    <div class="button-img">
+                    <button onclick="changebackgroud()">Hit me while music playing</button>
+                </div>
+                    
+                    
+
+                    
+                    
+                    <script>
+                    function myFunction() {
+                      var x = document.getElementById("myInput");
+                      if (x.type === "password") {
+                        x.type = "text";
+                      } else {
+                        x.type = "password";
+                      }
+                    }
+                    </script></div>
+            </form>
+            <script>
+                const videoCount = document.getElementById('videoCount');
+                const WiewCount = document.getElementById('view');
+                const subCount = document.getElementById('subCount');
+                const youtubeKey = 'AIzaSyAq2XvTyEjSn-7i5Z-u9EvjdIGhsWacJww';
+                var youtubeUser ='';
+                var userchange= document.getElementById("cr7");
+                const myForm = document.getElementById("myForm");
+
+                let getSubscribers = () => {
+
+fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${youtubeUser}&key=${youtubeKey}`)
+.then(response => {
+     return response.json()
+})
+.then(data => {
+console.log(data);
+subCount.innerHTML = data["items"][0].statistics.subscriberCount;
+})
+
+}
+               let getwiews = () => {
+
+fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${youtubeUser}&key=${youtubeKey}`)
+.then(response => {
+     return response.json()
+})
+.then(data => {
+console.log(data);
+view.innerHTML = data["items"][0].statistics.viewCount;
+})
+
+}
+               let getvideos = () => {
+
+fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${youtubeUser}&key=${youtubeKey}`)
+.then(response => {
+     return response.json()
+})
+.then(data => {
+console.log(data);
+videoCount.innerHTML = data["items"][0].statistics.videoCount;
+})
+
+}
+
+                function ytstats(){
+                    youtubeUser=userchange.value;
+                    getSubscribers();
+                    getwiews();
+                    getvideos();
+                    
+                }
+                myForm.addEventListener("submit",(e)=> {
+                    e.preventDefault();
+                    ytstats();
+
+
+                });
+                
+                
+
+    
+
+                    
+
+                        
+
+
+                   
+                
+
+
+
+
+
+
+
+            </script>
+            
+           
+        </div>
+        <div class="right-col">
+            <p></p>
+            <img onclick="changebackground()" src="pplay.png" id="icon">
+            
+        </div>
+        <audio id="mysong">
+            <source src="kanye.mp3">
+         </audio>
+     <script>
+         var mysong = document.getElementById("mysong");
+         var icon = document.getElementById("icon");
+     
+                 icon.onclick= function(){
+                     if(mysong.paused){
+                        mysong.play();
+                        icon.src ="pause.png";
+                    }else{
+                        mysong.paused();
+                        icon.src = "pplay.png";
+                    }
+                    document.getElementsByClassName("all").style.backgroundImage="url(space.gif)";
+     
+             }
+            
+             
+            function changebackgroud(){
+                document.getElementById("bd").style.backgroundImage="url(space2.gif)";
+            }
+
+            
+             
+     
+     
+     
+     </script>
+     
+     <script src="yt.js"></script>
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <div class="music">
+        <img src="gitar.png" >
+        <img src="plak.png" >
+        <img src="gitar.png" >
+        <img src="plak.png" >
+        <img src="gitar.png" >
+        <img src="plak.png" >
+        <img src="gitar.png" >
+        <img src="plak.png" >
+        <img src="gitar.png" >
+        <img src="plak.png" >
+
+
+
+
+
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+body{
+    background-image: url("background.png");
+    background-position: center;
+    text-align: center;
+    height: 100%;
+    
+
+
+
+
+
+}
+
+
+
+h1{
+    text-align: center;
+    text-decoration: aqua;
+    border: 10 px;
+    border-radius: 4%;
+
+}
+
+td{
+    text-align: center;
+    height: 150px;
+    width: 150px;
+    border: solid 3px black;
+    font-size: 100px;
+
+    
+
+}
+#btn{
+    background-color: pink;
+    border: solid 2px black;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    
+
+
+
+}
+#x{
+    background-color: pink;
+    border: solid 2px black;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+}
+#y{
+    background-color: pink;
+    border: solid 2px black;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+#xtable{
+    position: fixed ;
+    left: 250px;
+    top : 70px;
+    font-size: 150px;
+
+}
+#ytable{
+    position: fixed ;
+    right: 250px;
+    top : 70px;
+    font-size: 150px;
+    
+}
+#xscore{
+    position: fixed ;
+    left: 280px;
+    top : 400px;
+    
+
+}
+#xscorex{
+    position: fixed ;
+    left: 200px;
+    top : 400px;
+
+}
+#yscore{
+    position: fixed ;
+    right: 280px;
+    top : 400px;
+
+}
+#yscorey{
+    position: fixed ;
+    right: 200px;
+    top : 400px;
+}
+#resetsong{
+    background-color: pink;
+    border: solid 2px black;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+}
+#resetgame{
+    background-color: pink;
+    border: solid 2px black;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+}

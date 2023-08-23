@@ -1,0 +1,153 @@
+
+*{
+   margin: 0;
+   padding: 0;
+   font-family: sans-serif;
+}
+.container{
+   height: 100vh;
+   width: 100%;
+   background-image: url("background.png");
+   background-size: cover;
+   background-position: center;
+   position: relative;
+
+}
+.navbar{
+    width: 88%;
+    margin: top;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 200px;
+    cursor: pointer;
+    margin-left: 5% ;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 15;
+    padding: 10px;
+    
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fbfcfd;
+    padding: 10px 25px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 30%;
+}
+.left-col{
+    margin-left: 6%;
+}
+.left-col h1{
+    font-size: 100px;
+    color: plum;
+    line-height: 110px;
+    float: left;
+    opacity: 0.5;
+
+}
+.right-col{
+    float: right;
+    margin-right: 28%;
+    margin-top: 37px;
+    display: flex;
+    align-items: center;
+    
+}   
+.right-col p{
+    font-size: 20px;
+    color: #fbfcfd ;
+    font-weight: 400;
+    margin-right: 15px;
+
+}
+#icon{
+    width: 45px;
+    cursor: pointer;
+
+
+}
+.stars img{ 
+    width: 20px;
+    animation: stars1 7s linear infinite;
+    
+}
+.stars{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+
+}
+@keyframes stars1{
+    0%{
+        transform:translateY(-700px);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+
+}
+.stars img:nth-child(1){
+    animation-delay:2s;
+}
+.stars img:nth-child(2){
+    animation-delay:1s;
+}
+.stars img:nth-child(3){
+    animation-delay:3s;
+}
+.stars img:nth-child(4){
+    animation-delay:4.5s;
+}
+.stars img:nth-child(5){
+    animation-delay:3s;
+}
+.stars img:nth-child(6){
+    animation-delay:6s;
+}
+.stars img:nth-child(7){
+    animation-delay:7s;
+}
+.stars img:nth-child(8){
+    animation-delay:5.3s;
+}
+
+.tek{
+    align-items: left;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active
+{
+    background-color: #fff;
+    color: #2b1055;
+}   
+
+
+
+
